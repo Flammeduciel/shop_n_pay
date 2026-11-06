@@ -9,6 +9,13 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.logo {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--primary);
+}
+
 body {
   margin: 0;
   background: var(--color-paper);

@@ -12,7 +12,7 @@ export function CartLink() {
       : "Panier";
 
   return (
-    <Link href="/panier" className="header-action" aria-label={label}>
+    <Link href="/panier" className="icon-button cart-button" aria-label={label}>
       <CartIcon />
       <span>Panier</span>
       {ready && itemCount > 0 ? (
