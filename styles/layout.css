@@ -15,6 +15,10 @@
   margin-top: var(--space-4);
 }
 
+.auth-create {
+  margin-top: var(--space-3);
+}
+
 .page {
   padding-block: var(--space-8) var(--space-20);
   padding-inline: var(--space-4);

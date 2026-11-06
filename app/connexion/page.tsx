@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { loginAction } from "@/app/actions/auth";
 import { Alert } from "@/components/alert";
-import { CheckIcon, LockIcon, ShieldIcon, TruckIcon } from "@/components/icons";
+import { CheckIcon, TruckIcon } from "@/components/icons";
 import { safeCallbackPath } from "@/lib/callback";
 
 export const dynamic = "force-dynamic";
@@ -48,14 +48,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
           </p>
 
           <ul className="auth-points">
-            <li>
-              <ShieldIcon size={18} />
-              Session persistante pendant 30 jours
-            </li>
-            <li>
-              <LockIcon size={18} />
-              Route de commande protégée par le middleware
-            </li>
             <li>
               <TruckIcon size={18} />
               Historique des commandes dans le compte
@@ -114,9 +106,11 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             </button>
           </form>
 
-          <Link href="/inscription" className="button button--secondary button--block">
-            Créer un compte
-          </Link>
+          <div className="auth-create">
+            <Link href="/inscription" className="button button--secondary button--block">
+              Créer un compte
+            </Link>
+          </div>
 
           <div className="auth-card__checks">
             <p>
