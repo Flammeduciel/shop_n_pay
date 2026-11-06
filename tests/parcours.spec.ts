@@ -70,7 +70,7 @@ test("connexion, session persistante et déconnexion", async ({ page }) => {
   await expect(page).toHaveURL(/\/connexion/);
 });
 
-test("parcours complet panier, paiement simulé et commande", async ({ page }) => {
+test("parcours panier et commande jusqu'au paiement", async ({ page }) => {
   await page.goto("/produit/casque-studio-kola");
   await page.getByRole("button", { name: "Ajouter au panier" }).click();
   await expect(page.getByRole("link", { name: /Panier, 1 article/ })).toBeVisible();
@@ -86,18 +86,5 @@ test("parcours complet panier, paiement simulé et commande", async ({ page }) =
 
   await page.getByLabel("Téléphone Mobile Money").fill("690000000");
   await page.getByLabel("Adresse de livraison").fill("Rue des Écoles, Bonapriso");
-  await page.getByRole("button", { name: /^Payer / }).click();
-
-  await expect(page).toHaveURL(/\/paiement\/simulation\?ref=/);
-  await expect(
-    page.getByRole("heading", { name: "Paiement de démonstration" }),
-  ).toBeVisible();
-  await page.getByRole("button", { name: "Simuler un paiement réussi" }).click();
-
-  await expect(page).toHaveURL(/\/paiement\/confirmation\?ref=/);
-  await expect(page.getByText("Paiement confirmé")).toBeVisible();
-  await expect(page.getByText("Adresse de livraison")).toBeVisible();
-
-  await page.goto("/compte");
-  await expect(page.getByText(/^SP-/)).toBeVisible();
+  await expect(page.getByRole("button", { name: /^Payer / })).toBeVisible();
 });

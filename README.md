@@ -34,7 +34,7 @@ Les routes `/compte` et `/paiement` sont protégées par le middleware. Une visi
 - Commande protégée, validation du téléphone camerounais et récapitulatif avant paiement.
 - Paiement Mobile Money par Monetbil, avec vérification du statut côté serveur.
 - Historique des quatre dernières commandes dans le compte client.
-- Mode démonstration automatique quand les clés Monetbil ne sont pas configurées.
+- Paiement réel via Mobile Money avec les clés configurées.
 - Pages statiques pour la présentation, la livraison et les mentions pratiques.
 - Métadonnées, sitemap et robots.txt pour l'indexation.
 - Tests de bout en bout Playwright et audit Lighthouse mobile.
@@ -53,7 +53,7 @@ Le projet utilise les trois modes demandés. Le tableau reprend les choix visibl
 | Connexion | `/connexion` | SSR, `force-dynamic` | La page vérifie la session et lit le paramètre `callbackUrl`. |
 | Paiement | `/paiement` | SSR, `force-dynamic` | Le formulaire dépend du compte connecté. |
 | Confirmation | `/paiement/confirmation` | SSR, `force-dynamic` | Le statut dépend de la référence et du cookie de commande. |
-| Simulation | `/paiement/simulation` | SSR, `force-dynamic` | La page lit la commande en attente et vérifie le mode démonstration. |
+
 | Panier | `/panier` | Statique avec composant client | La coquille de page est statique, le contenu vient du stockage local. |
 | Livraison et à propos | `/livraison`, `/a-propos` | SSG, `force-static` | Pages de contenu sans donnée personnelle. |
 
@@ -69,7 +69,7 @@ Les routes API de paiement et d'authentification sont dynamiques par nature.
 | Recherche | `app/recherche/page.tsx` | Recherche serveur sur le nom, la description et la catégorie. |
 | Panier | `app/panier/page.tsx` | Lignes du panier, quantités, frais et total. |
 | Commande | `app/paiement/page.tsx` | Formulaire de livraison et lancement du paiement. |
-| Simulation | `app/paiement/simulation/page.tsx` | Paiement fictif quand Monetbil n'est pas configuré. |
+
 | Confirmation | `app/paiement/confirmation/page.tsx` | Statut, récapitulatif et adresse de livraison. |
 | Connexion | `app/connexion/page.tsx` | Formulaire de connexion et compte de démonstration. |
 | Compte | `app/compte/page.tsx` | Informations de session, commandes et déconnexion. |
@@ -79,7 +79,7 @@ Les routes API de paiement et d'authentification sont dynamiques par nature.
 | Initialisation du paiement | `app/api/paiement/initier/route.ts` | Validation du panier, création de la référence et appel Monetbil. |
 | Retour Monetbil | `app/api/paiement/retour/route.ts` | Vérification du statut et enregistrement de la commande. |
 | Notification Monetbil | `app/api/paiement/notification/route.ts` | Vérification de la signature et du statut. |
-| Simulation | `app/api/paiement/simulation/route.ts` | Enregistrement d'un paiement fictif en mode démonstration. |
+
 
 ## 5. Authentification
 
@@ -98,19 +98,17 @@ Le compte de démonstration est volontairement unique. Le mot de passe affiché 
 
 ### Mode démonstration
 
-Le mode démonstration est actif si `MONETBIL_DEMO=true` ou si `MONETBIL_SERVICE_KEY` ou `MONETBIL_SERVICE_SECRET` est vide. Le parcours est alors le suivant :
+Le paiement réel est utilisé. Le parcours est le suivant :
 
 1. Le panier est validé et le montant est recalculé côté serveur.
 2. Une référence `SP-...` est créée et conservée dans le cookie `shoppay_pending`.
-3. Le navigateur est envoyé vers `/paiement/simulation`.
-4. L'utilisateur choisit un paiement réussi ou un échec.
+3. Le navigateur est envoyé vers le prestataire de paiement Mobile Money.
+4. Après validation, le prestataire renvoie vers `/api/paiement/retour`.
 5. La commande est enregistrée dans le cookie `shoppay_orders` et la page de confirmation affiche le statut.
 
-Aucun montant n'est débité dans ce mode.
+### Mode de paiement
 
-### Mode Monetbil
-
-Quand les deux clés sont renseignées et que `MONETBIL_DEMO` vaut `false`, le serveur appelle le guichet Monetbil.
+Le serveur appelle le prestataire Mobile Money avec les clés configurées.
 
 - Widget : `POST https://www.monetbil.com/widget/v2.1/{serviceKey}` au format `application/x-www-form-urlencoded`, avec `amount`, `phone`, `country`, `currency`, `item_ref`, `payment_ref`, `return_url`, `notify_url` et `sign`.
 - Retour utilisateur : `GET /api/paiement/retour`, qui vérifie la référence puis interroge Monetbil.
@@ -128,11 +126,11 @@ Les clés restent côté serveur. Elles ne sont jamais exposées dans le navigat
 app/
   actions/              Server Actions de connexion et de déconnexion
   api/auth/             Routes Auth.js
-  api/paiement/         Initialisation, retour, notification, simulation
+  api/paiement/         Initialisation, retour, notification
   catalogue/            Catalogue ISR
   compte/               Compte protégé
   connexion/            Formulaire de connexion
-  paiement/             Commande, simulation et confirmation
+  paiement/             Commande et confirmation
   panier/               Panier client
   produit/[slug]/       Fiches produit statiques
   recherche/            Recherche serveur

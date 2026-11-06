@@ -26,8 +26,7 @@ type MonetbilConfig = {
 export function getMonetbilConfig(): MonetbilConfig {
   const serviceKey = (process.env.MONETBIL_SERVICE_KEY ?? "").trim();
   const serviceSecret = (process.env.MONETBIL_SERVICE_SECRET ?? "").trim();
-  const forcedDemo = (process.env.MONETBIL_DEMO ?? "").toLowerCase() === "true";
-  const demo = forcedDemo || !serviceKey || !serviceSecret;
+  const demo = false;
 
   return {
     serviceKey,
@@ -77,11 +76,8 @@ export async function createMonetbilPayment(
 ): Promise<{ paymentUrl: string; demo: boolean }> {
   const config = getMonetbilConfig();
 
-  if (config.demo) {
-    return {
-      paymentUrl: `/paiement/simulation?ref=${encodeURIComponent(input.paymentRef)}`,
-      demo: true,
-    };
+  if (!config.serviceKey || !config.serviceSecret) {
+    throw new Error("Les clés Monetbil ne sont pas configurées.");
   }
 
   const params = paymentParams(input, config.logoUrl);
