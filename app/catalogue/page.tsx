@@ -22,7 +22,7 @@ export default async function CataloguePage() {
         <p className="eyebrow">Catalogue</p>
         <h1>Des objets choisis pour leur usage</h1>
         <p className="page-header__lead">
-          Douze références, quatre familles. Les prix sont affichés en FCFA et
+          Dix-huit références, quatre familles. Les prix sont affichés en FCFA et
           incluent la préparation de la commande.
         </p>
       </header>
