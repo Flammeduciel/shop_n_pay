@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { CartLink } from "./cart-link";
-import { SearchIcon, UserIcon } from "./icons";
-
-const navigation = [
-  { href: "/", label: "Accueil" },
-  { href: "/catalogue", label: "Catalogue" },
-  { href: "/livraison", label: "Livraison" },
-  { href: "/a-propos", label: "À propos" },
-];
+import { UserIcon } from "./icons";
 
 export function SiteHeader() {
   return (
@@ -21,30 +14,24 @@ export function SiteHeader() {
             <span>Shop&Pay</span>
           </Link>
 
-          <nav className="navbar" aria-label="Navigation principale">
-            {navigation.map((item) => (
-              <Link key={item.href} href={item.href} className="text-button">
-                {item.label}
-              </Link>
-            ))}
+          <form action="/recherche" method="get" role="search" className="search-container header-search">
+            <i className="fas fa-search" aria-hidden="true" />
+            <input
+              id="header-search"
+              name="q"
+              type="search"
+              placeholder="Rechercher un produit..."
+              aria-label="Rechercher un produit"
+              autoComplete="off"
+            />
+          </form>
 
-            <form action="/recherche" method="get" role="search" className="search-container header-search">
-              <SearchIcon size={16} />
-              <input
-                id="header-search"
-                name="q"
-                type="search"
-                placeholder="Rechercher un produit..."
-                aria-label="Rechercher un produit"
-                autoComplete="off"
-              />
-            </form>
-
+          <div className="navbar">
             <Link href="/compte" className="icon-button" aria-label="Mon compte">
               <UserIcon />
             </Link>
             <CartLink />
-          </nav>
+          </div>
         </div>
       </header>
     </>

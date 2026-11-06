@@ -47,10 +47,9 @@
 
 .announcement {
   padding: 0.6rem var(--space-4);
-  background: var(--color-ink);
-  color: var(--color-paper);
-  font-size: var(--text-xs);
-  letter-spacing: 0.02em;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 13px;
   text-align: center;
 }
 
