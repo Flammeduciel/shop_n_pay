@@ -65,6 +65,9 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
           <Link href="/catalogue" className="link-arrow">
             Continuer sans acheter
           </Link>
+          <Link href="/inscription" className="link-arrow">
+            Créer un compte
+          </Link>
         </div>
 
         <div className="auth-card">
