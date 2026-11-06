@@ -40,6 +40,8 @@ Dans **Project Settings**, puis **Environment Variables**, ajouter les valeurs p
 | `MONETBIL_SERVICE_SECRET` | secret fourni par Monetbil | Pour le paiement réel |
 | `MONETBIL_DEMO` | `false` en production avec clés | Non |
 | `MONETBIL_LOGO_URL` | `https://shop-n-pay.vercel.app/icon.svg` | Non |
+| `DATABASE_URL` | URL PostgreSQL managé (Neon, Supabase, etc.) | Pour utiliser les produits en base |
+| `DATABASE_SSL` | `prefer` | Non |
 
 Générer le secret Auth.js avec :
 

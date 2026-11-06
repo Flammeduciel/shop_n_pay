@@ -1,4 +1,4 @@
-import { getProduct, type Product } from "./products";
+import { type Product, products } from "./products";
 
 export const SHIPPING_FEE = 2500;
 export const FREE_SHIPPING_THRESHOLD = 50000;
@@ -36,7 +36,7 @@ export function resolveCart(input: CartInput[]): CartTotals {
   for (const line of input) {
     if (!line || typeof line.slug !== "string") continue;
 
-    const product = getProduct(line.slug);
+    const product = products.find((item) => item.slug === line.slug);
     if (!product) continue;
 
     const quantity = clampQuantity(line.quantity);

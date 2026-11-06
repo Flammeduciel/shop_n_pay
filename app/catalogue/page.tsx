@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { CatalogueBrowser } from "@/components/catalogue-browser";
-import { products } from "@/lib/products";
+import { getProducts } from "@/lib/products-server";
 
 export const revalidate = 300;
 
@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     "Audio, mobilité, maison et bureau. Parcourez la sélection Shop&Pay et payez par Mobile Money.",
 };
 
-export default function CataloguePage() {
+export default async function CataloguePage() {
+  const products = await getProducts();
+
   return (
     <div className="container page">
       <Breadcrumb items={[{ label: "Catalogue" }]} />

@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { products } from "@/lib/products";
+import { getProducts } from "@/lib/products-server";
 import { absoluteUrl } from "@/lib/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -32,7 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const productRoutes: MetadataRoute.Sitemap = products.map((product) => ({
+  const allProducts = await getProducts();
+  const productRoutes: MetadataRoute.Sitemap = allProducts.map((product) => ({
     url: absoluteUrl(`/produit/${product.slug}`),
     lastModified,
     changeFrequency: "weekly",

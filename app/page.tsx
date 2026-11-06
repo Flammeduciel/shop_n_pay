@@ -9,12 +9,13 @@ import {
 } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
-import { categories, getFeaturedProducts } from "@/lib/products";
+import { categories } from "@/lib/products";
+import { getFeaturedProducts } from "@/lib/products-server";
 
 export const dynamic = "force-static";
 
-export default function HomePage() {
-  const featuredProducts = getFeaturedProducts(4);
+export default async function HomePage() {
+  const featuredProducts = await getFeaturedProducts(4);
 
   return (
     <>

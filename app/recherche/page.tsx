@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Alert } from "@/components/alert";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ProductCard } from "@/components/product-card";
-import { searchProducts } from "@/lib/products";
+import { searchProducts } from "@/lib/products-server";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +23,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const params = await searchParams;
   const rawQuery = params.q;
   const query = (Array.isArray(rawQuery) ? rawQuery[0] : rawQuery ?? "").trim();
-  const results = query ? searchProducts(query) : [];
+  const results = query ? await searchProducts(query) : [];
 
   return (
     <div className="container page">

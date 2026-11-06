@@ -11,9 +11,9 @@ import { formatPrice } from "@/lib/format";
 import {
   getCategoryName,
   getProduct,
+  getProducts,
   getRelatedProducts,
-  products,
-} from "@/lib/products";
+} from "@/lib/products-server";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -21,7 +21,8 @@ type ProductPageProps = {
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await getProducts();
   return products.map((product) => ({ slug: product.slug }));
 }
 
@@ -29,7 +30,7 @@ export async function generateMetadata({
   params,
 }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProduct(slug);
+  const product = await getProduct(slug);
 
   if (!product) {
     return { title: "Produit introuvable" };
@@ -48,13 +49,13 @@ export async function generateMetadata({
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = getProduct(slug);
+  const product = await getProduct(slug);
 
   if (!product) {
     notFound();
   }
 
-  const relatedProducts = getRelatedProducts(product, 3);
+  const relatedProducts = await getRelatedProducts(product, 3);
   const categoryName = getCategoryName(product.category);
 
   return (

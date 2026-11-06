@@ -138,7 +138,7 @@ app/
   recherche/            Recherche serveur
 components/             Composants d'interface et panier client
 lib/                    Données, panier, commandes, Monetbil, validation
-public/images/           Illustrations SVG des produits
+public/images/           Ressources statiques et icônes
 styles/                  Tokens et feuilles CSS
 tests/                   Tests Playwright
 docs/lighthouse/         Rapport Lighthouse mobile
@@ -172,6 +172,7 @@ npm run build
 npm run start
 npm run test:e2e
 npm run audit:lighthouse
+npm run db:seed
 ```
 
 `npm run test:e2e` lance Playwright sur un serveur de production. Exécuter `npm run build` avant la première fois. Le test utilise le navigateur Chrome installé sur la machine.
@@ -191,6 +192,8 @@ npm run audit:lighthouse
 | `MONETBIL_SERVICE_SECRET` | Selon le mode | Clé secrète Monetbil, utilisée pour la signature. |
 | `MONETBIL_DEMO` | Non | `true` force la simulation locale. `false` active Monetbil si les clés sont présentes. |
 | `MONETBIL_LOGO_URL` | Non | Logo affiché sur le guichet Monetbil. Par défaut, `/icon.svg` du site. |
+| `DATABASE_URL` | Non | URL de connexion PostgreSQL. Si absent, les données initiales sont utilisées. |
+| `DATABASE_SSL` | Non | `prefer` par défaut. Mettre `disable` en local si nécessaire. |
 
 Le fichier `.env.local` est ignoré par Git. Ne jamais versionner de clé réelle.
 
@@ -241,12 +244,13 @@ Voir [ISSUES.md](ISSUES.md) pour la liste complète, les assignations et les tro
 
 ## 14. Limites connues
 
+- Les produits sont stockés dans PostgreSQL quand `DATABASE_URL` est renseigné (`db/schema.sql` et `db/seed.sql`, commande `npm run db:seed`). Sans base, les données initiales sont utilisées.
 - Les commandes sont stockées dans un cookie HttpOnly et non dans une base de données. Elles sont donc liées au navigateur et limitées à quatre entrées.
 - Le compte de démonstration est unique et les identifiants sont configurables par variables d'environnement. Il n'existe pas d'inscription publique.
 - Le paiement réel dépend de la validation du compte Monetbil et des clés de production.
 - Le panier est conservé dans `localStorage` et n'est pas synchronisé entre appareils.
 - Il n'y a pas d'espace d'administration pour gérer les produits ou les commandes.
-- Les images sont des illustrations SVG locales, sans service de stockage externe.
+- Les images produits sont des URL réelles (Unsplash par défaut), modifiables directement dans la table `products`.
 
 ## 15. Démonstration
 
