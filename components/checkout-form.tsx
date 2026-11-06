@@ -171,13 +171,13 @@ export function CheckoutForm({ defaultEmail, defaultName }: CheckoutFormProps) {
                 className="field-input"
                 autoComplete="tel"
                 inputMode="tel"
-                placeholder="6 90 00 00 00"
+                placeholder="06 559 07 14"
                 pattern="[0-9+\s().-]{9,20}"
                 aria-describedby="phone-hint"
                 required
               />
               <p id="phone-hint" className="field-hint">
-                Numéro camerounais, avec ou sans l'indicatif 237.
+                Numéro congolais, avec ou sans l'indicatif 242.
               </p>
             </div>
             <div className="field">
