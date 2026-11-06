@@ -887,7 +887,7 @@
   }
 
   .hero__media {
-    order: -1;
+    order: 1;
   }
 
   .cta-band {
