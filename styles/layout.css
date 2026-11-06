@@ -56,36 +56,6 @@
 .header-search {
   flex: 1;
   max-width: 360px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header-search input {
-  width: 100%;
-  padding: 10px 12px 10px 36px;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-pill);
-  font-size: 13px;
-  color: var(--text);
-  transition: all var(--duration) var(--ease-out);
-}
-
-.header-search input:focus {
-  outline: none;
-  border-color: var(--primary);
-  background: var(--surface);
-}
-
-.header-search i {
-  position: absolute;
-  left: 12px;
-  color: var(--text-tertiary);
-  pointer-events: none;
-}
-
-.header-search {
   position: relative;
 }
 
