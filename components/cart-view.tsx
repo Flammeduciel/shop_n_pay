@@ -140,7 +140,7 @@ export function CartView() {
 
         <p className="summary__note">
           <LockIcon size={16} />
-          Paiement par Mobile Money. Vous serez redirigé vers le guichet Monetbil.
+          Paiement par Mobile Money. Vous serez redirigé vers le guichet Mobile Money.
         </p>
       </aside>
     </div>

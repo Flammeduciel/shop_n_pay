@@ -62,7 +62,7 @@ export function SiteFooter() {
 
       <div className="container footer-bottom">
         <p>© {new Date().getFullYear()} Shop&Pay. Tous droits réservés.</p>
-        <p>Paiement par Mobile Money avec Monetbil.</p>
+        <p>Paiement par Mobile Money.</p>
       </div>
     </footer>
   );

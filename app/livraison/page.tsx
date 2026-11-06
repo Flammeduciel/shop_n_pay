@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Livraison et paiement",
   description:
-    "Zones de livraison, délais, frais et fonctionnement du paiement Mobile Money avec Monetbil.",
+    "Zones de livraison, délais, frais et fonctionnement du paiement Mobile Money avec Mobile Money.",
 };
 
 export default function DeliveryPage() {
@@ -55,7 +55,7 @@ export default function DeliveryPage() {
         <section id="paiement" aria-labelledby="paiement-title">
           <h2 id="paiement-title">Paiement Mobile Money</h2>
           <p>
-            Le paiement est traité par Monetbil. Le montant total, livraison
+            Le paiement est traité par Mobile Money. Le montant total, livraison
             comprise, est calculé sur le serveur avant l'ouverture du guichet.
           </p>
 
@@ -68,7 +68,7 @@ export default function DeliveryPage() {
               </p>
             </li>
             <li>
-              <h3>Valider sur le guichet Monetbil</h3>
+              <h3>Valider sur le guichet Mobile Money</h3>
               <p>
                 Vous choisissez votre opérateur, saisissez votre numéro et
                 confirmez avec votre code secret sur votre téléphone.
@@ -77,7 +77,7 @@ export default function DeliveryPage() {
             <li>
               <h3>Revenir sur Shop&Pay</h3>
               <p>
-                La boutique vérifie le statut du paiement auprès de Monetbil, puis
+                La boutique vérifie le statut du paiement auprès de Mobile Money, puis
                 affiche la confirmation. La commande apparaît dans votre compte.
               </p>
             </li>
@@ -90,7 +90,7 @@ export default function DeliveryPage() {
 
           <p>
             Aucune donnée de carte bancaire n'est demandée ni stockée. Les clés
-            Monetbil restent sur le serveur et ne sont jamais envoyées au
+            Mobile Money restent sur le serveur et ne sont jamais envoyées au
             navigateur.
           </p>
         </section>
@@ -118,7 +118,7 @@ export default function DeliveryPage() {
         <div>
           <LockIcon size={22} />
           <h3>Paiement protégé</h3>
-          <p>La signature Monetbil est vérifiée avant toute confirmation.</p>
+          <p>La signature Mobile Money est vérifiée avant toute confirmation.</p>
         </div>
         <div>
           <CheckIcon size={22} />

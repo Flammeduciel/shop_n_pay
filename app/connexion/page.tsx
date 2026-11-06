@@ -119,7 +119,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             </p>
             <p>
               <CheckIcon size={16} />
-              Le paiement se fait sur le guichet Monetbil.
+              Le paiement se fait sur le guichet Mobile Money.
             </p>
           </div>
         </div>

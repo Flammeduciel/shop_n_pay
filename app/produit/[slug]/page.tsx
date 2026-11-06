@@ -108,7 +108,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </p>
             <p>
               <LockIcon size={18} />
-              Paiement Mobile Money sur le guichet Monetbil.
+              Paiement Mobile Money sur le guichet Mobile Money.
             </p>
             <p>
               <ShieldIcon size={18} />

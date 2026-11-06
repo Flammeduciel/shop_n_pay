@@ -129,7 +129,7 @@ export default async function RegisterPage({ searchParams }: RegisterPageProps) 
             </p>
             <p>
               <CheckIcon size={16} />
-              Le paiement se fait sur le guichet Monetbil.
+              Le paiement se fait sur le guichet Mobile Money.
             </p>
           </div>
         </div>
