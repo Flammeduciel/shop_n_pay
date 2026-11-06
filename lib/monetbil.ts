@@ -61,6 +61,7 @@ function paymentParams(input: MonetbilPaymentInput, logoUrl: string): Record<str
     currency: "XAF",
     item_ref: input.itemRef,
     payment_ref: input.paymentRef,
+    locale: "fr",
     user: input.userId,
     first_name: input.firstName,
     last_name: input.lastName,
@@ -87,7 +88,6 @@ export async function createMonetbilPayment(
   const sign = signMonetbilParams(config.serviceSecret, params);
   const body = new URLSearchParams({
     ...params,
-    locale: "fr",
     sign,
   });
 
