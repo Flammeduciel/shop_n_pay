@@ -7,7 +7,7 @@ Shop&Pay vend une sélection courte d'objets pour l'audio, la mobilité, la mais
 | Élément | Valeur |
 | --- | --- |
 | URL de production | `https://<projet>.vercel.app` (à remplacer après déploiement) |
-| Dépôt GitHub | `https://github.com/<organisation>/shop_n_pay` |
+| Dépôt GitHub | `https://github.com/Flammeduciel/shop_n_pay` |
 | Groupe | 10 |
 | Stack | Next.js 15.5, React 19, TypeScript, Auth.js 5, CSS |
 | Hébergement | Vercel |
