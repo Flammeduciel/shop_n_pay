@@ -1,33 +1,68 @@
 :root {
-  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  /* DevShop palette */
+  --duration: 180ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --range-progress: 100%;
 
-  --color-ink: #111111;
-  --color-ink-soft: #333333;
-  --color-muted: #666666;
-  --color-paper: #ffffff;
-  --color-surface: #f5f5f5;
-  --color-paper-deep: #eaeaea;
-  --color-line: #dddddd;
-  --color-line-strong: #999999;
-  --color-accent: #111111;
-  --color-accent-hover: #333333;
-  --color-accent-soft: #eeeeee;
-  --color-danger: #c62828;
-  --color-danger-soft: #fce4e4;
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --primary-soft: #f0fdfa;
+
+  --canvas: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #f7f7fa;
+  --surface-primary: #f0fdfa;
+
+  --text: #1d1d1f;
+  --text-secondary: #62626a;
+  --text-tertiary: #7b7b83;
+
+  --line: #e5e5ea;
+  --line-strong: #d1d1d6;
+
+  --danger: #b42335;
+  --danger-soft: #fff0f2;
+  --success: #28a745;
+  --success-soft: #d4edda;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  --shadow-product: 0 5px 18px rgb(29 29 31 / 12%);
+  --shadow-card: 0 2px 8px rgb(29 29 31 / 8%);
+  --shadow-menu: 0 8px 24px rgb(29 29 31 / 12%);
+
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --header-height: 64px;
+  --mobile-nav-height: 60px;
+
+  /* Aliases pour le code existant */
+  --font-sans: var(--font-family);
+  --color-ink: var(--text);
+  --color-ink-soft: var(--text-secondary);
+  --color-muted: var(--text-tertiary);
+  --color-paper: var(--canvas);
+  --color-surface: var(--surface);
+  --color-paper-deep: var(--surface-soft);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--primary);
+  --color-accent-hover: var(--primary-hover);
+  --color-accent-soft: var(--primary-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
   --color-warning: #b26a00;
   --color-warning-soft: #fff3e0;
-  --color-focus: #111111;
+  --color-focus: var(--primary);
 
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 6px;
-  --radius-pill: 2px;
+  --radius-lg: var(--radius-card);
+  --shadow-sm: var(--shadow-card);
+  --shadow-md: var(--shadow-menu);
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
-
-  --container: 1180px;
+  --container: 1400px;
   --container-narrow: 860px;
 
   --space-1: 0.25rem;

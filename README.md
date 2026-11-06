@@ -11,7 +11,7 @@ Shop&Pay vend une sélection courte d'objets pour l'audio, la mobilité, la mais
 | Groupe | 10 |
 | Stack | Next.js 15.5, React 19, TypeScript, Auth.js 5, CSS |
 | Hébergement | Vercel |
-| Paiement | Monetbil, MTN Mobile Money et Orange Money |
+| Paiement | Monetbil, MTN Mobile Money et Airtel Money |
 
 ## 1. Compte de test
 
@@ -172,7 +172,9 @@ npm run build
 npm run start
 npm run test:e2e
 npm run audit:lighthouse
+npm run db:migrate
 npm run db:seed
+npm run db:reset
 ```
 
 `npm run test:e2e` lance Playwright sur un serveur de production. Exécuter `npm run build` avant la première fois. Le test utilise le navigateur Chrome installé sur la machine.

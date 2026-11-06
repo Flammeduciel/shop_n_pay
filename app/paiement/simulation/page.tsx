@@ -53,7 +53,7 @@ export default async function SimulationPage({ searchParams }: SimulationPagePro
         <p className="eyebrow">Mobile Money</p>
         <h1>Paiement de démonstration</h1>
         <p className="page-header__lead">
-          Les clés Monetbil ne sont pas configurées. Cet écran permet de vérifier
+          Les clés Mobile Money ne sont pas configurées. Cet écran permet de vérifier
           le parcours de commande sans mouvement d'argent.
         </p>
       </header>

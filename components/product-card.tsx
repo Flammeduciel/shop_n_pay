@@ -14,7 +14,7 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
 
   return (
     <article className="product-card">
-      <div className="product-card__media">
+      <div className="product-media">
         <Link href={`/produit/${product.slug}`} tabIndex={-1} aria-hidden="true">
           <Image
             src={product.image}
@@ -25,18 +25,18 @@ export function ProductCard({ product, priority = false }: ProductCardProps) {
             priority={priority}
           />
         </Link>
-        {product.badge ? <span className="product-card__badge">{product.badge}</span> : null}
+        {product.badge ? <span className="product-badge">{product.badge}</span> : null}
       </div>
 
-      <div className="product-card__body">
-        <p className="product-card__category">{getCategoryName(product.category)}</p>
-        <h3 className="product-card__title">
+      <div className="product-info">
+        <p className="product-category">{getCategoryName(product.category)}</p>
+        <h3 className="product-title">
           <Link href={`/produit/${product.slug}`}>{product.name}</Link>
         </h3>
-        <p className="product-card__summary">{product.summary}</p>
+        <p className="product-summary">{product.summary}</p>
 
-        <div className="product-card__footer">
-          <span className="price">{formatPrice(product.price)}</span>
+        <div className="product-footer">
+          <span className="product-price">{formatPrice(product.price)}</span>
           <AddToCart
             slug={product.slug}
             name={product.name}

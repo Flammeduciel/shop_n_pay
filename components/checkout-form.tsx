@@ -171,13 +171,13 @@ export function CheckoutForm({ defaultEmail, defaultName }: CheckoutFormProps) {
                 className="field-input"
                 autoComplete="tel"
                 inputMode="tel"
-                placeholder="6 90 00 00 00"
+                placeholder="06 559 07 14"
                 pattern="[0-9+\s().-]{9,20}"
                 aria-describedby="phone-hint"
                 required
               />
               <p id="phone-hint" className="field-hint">
-                Numéro camerounais, avec ou sans l'indicatif 237.
+                Numéro congolais, avec ou sans l'indicatif 242.
               </p>
             </div>
             <div className="field">
@@ -188,14 +188,13 @@ export function CheckoutForm({ defaultEmail, defaultName }: CheckoutFormProps) {
                 id="city"
                 name="city"
                 className="field-input field-input--select"
-                defaultValue="Douala"
+                defaultValue="Brazzaville"
                 required
               >
-                <option value="Douala">Douala</option>
-                <option value="Yaoundé">Yaoundé</option>
-                <option value="Bafoussam">Bafoussam</option>
-                <option value="Garoua">Garoua</option>
-                <option value="Bertoua">Bertoua</option>
+                <option value="Brazzaville">Brazzaville</option>
+                <option value="Pointe-Noire">Pointe-Noire</option>
+                <option value="Dolisie">Dolisie</option>
+                <option value="Owando">Owando</option>
                 <option value="Autre">Autre ville</option>
               </select>
             </div>
@@ -241,8 +240,8 @@ export function CheckoutForm({ defaultEmail, defaultName }: CheckoutFormProps) {
             <div>
               <p className="payment-method__title">Mobile Money</p>
               <p className="payment-method__text">
-                MTN Mobile Money, Orange Money et autres opérateurs pris en charge
-                par Monetbil. Vous validerez le paiement sur le guichet sécurisé.
+                MTN Mobile Money, Airtel Money et autres opérateurs pris en charge
+                par Mobile Money. Vous validerez le paiement sur le sécurisé.
               </p>
             </div>
           </div>

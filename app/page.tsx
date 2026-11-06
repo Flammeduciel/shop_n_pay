@@ -22,7 +22,7 @@ export default async function HomePage() {
       <section className="hero">
         <div className="container hero__inner">
           <div className="hero__copy">
-            <p className="eyebrow">Sélection 2026 · Douala</p>
+            <p className="eyebrow">Sélection 2026</p>
             <h1>Des objets utiles, choisis pour durer.</h1>
             <p className="hero__lead">
               Audio, mobilité, maison et bureau. Une sélection courte, des prix
@@ -42,11 +42,11 @@ export default async function HomePage() {
             <ul className="hero__points">
               <li>
                 <CheckIcon size={18} />
-                Livraison à Douala et Yaoundé sous 48 h
+                Livraison à Brazzaville et Pointe-Noire sous 48 h
               </li>
               <li>
                 <CheckIcon size={18} />
-                MTN Mobile Money et Orange Money
+                MTN Mobile Money et Airtel Money
               </li>
               <li>
                 <CheckIcon size={18} />
@@ -57,8 +57,8 @@ export default async function HomePage() {
 
           <div className="hero__media">
             <Image
-              src="/images/hero-still-life.svg"
-              alt="Lampe de bureau, carafe en verre et carnet posés sur une table"
+              src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80"
+              alt="Lampe de bureau posée sur une table"
               width={900}
               height={900}
               priority
@@ -79,14 +79,14 @@ export default async function HomePage() {
             <TruckIcon size={24} />
             <div>
               <h2>Livraison suivie</h2>
-              <p>Douala et Yaoundé sous 48 h, autres villes sous 72 h.</p>
+              <p>Brazzaville et Pointe-Noire sous 48 h, autres villes sous 72 h.</p>
             </div>
           </div>
           <div className="service-item">
             <LockIcon size={24} />
             <div>
               <h2>Paiement Mobile Money</h2>
-              <p>MTN et Orange Money via le guichet sécurisé Monetbil.</p>
+              <p>MTN et Airtel Money via le service de paiement sécurisé.</p>
             </div>
           </div>
           <div className="service-item">
@@ -161,7 +161,7 @@ export default async function HomePage() {
             <p className="eyebrow">Paiement</p>
             <h2>Mobile Money, sans carte bancaire</h2>
             <p>
-              Le paiement se fait sur le guichet Monetbil. Vous choisissez votre
+              Le paiement se fait en ligne. Vous choisissez votre
               opérateur, validez sur votre téléphone, puis revenez sur la boutique.
             </p>
             <Link href="/livraison#paiement" className="button button--secondary">
@@ -181,7 +181,7 @@ export default async function HomePage() {
               <span className="payment-steps__index">02</span>
               <div>
                 <h3>Vous payez</h3>
-                <p>Vous êtes redirigé vers Monetbil et validez avec votre code Mobile Money.</p>
+                <p>Vous êtes redirigé vers la page de paiement et validez avec votre code Mobile Money.</p>
               </div>
             </li>
             <li>

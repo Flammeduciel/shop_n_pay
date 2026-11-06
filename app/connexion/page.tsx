@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { loginAction } from "@/app/actions/auth";
 import { Alert } from "@/components/alert";
-import { CheckIcon, LockIcon, ShieldIcon, TruckIcon } from "@/components/icons";
+import { CheckIcon, TruckIcon } from "@/components/icons";
 import { safeCallbackPath } from "@/lib/callback";
 
 export const dynamic = "force-dynamic";
@@ -34,10 +34,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
   }
 
   const errorMessage = params.erreur ? errorMessages[params.erreur] : undefined;
-  const demoEmail = process.env.AUTH_DEMO_EMAIL ?? "demo@shoppay.cm";
-  const demoPassword = process.env.AUTH_DEMO_PASSWORD ?? "Demo1234!";
-  const showDemoHint =
-    !process.env.AUTH_DEMO_PASSWORD || process.env.AUTH_DEMO_PASSWORD === "Demo1234!";
 
   return (
     <div className="container page page--narrow">
@@ -53,22 +49,16 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
 
           <ul className="auth-points">
             <li>
-              <ShieldIcon size={18} />
-              Session persistante pendant 30 jours
-            </li>
-            <li>
-              <LockIcon size={18} />
-              Route de commande protégée par le middleware
-            </li>
-            <li>
               <TruckIcon size={18} />
               Historique des commandes dans le compte
             </li>
           </ul>
 
-          <Link href="/catalogue" className="link-arrow">
-            Continuer sans acheter
-          </Link>
+          <div className="auth-links">
+            <Link href="/catalogue" className="link-arrow">
+              Continuer sans acheter
+            </Link>
+          </div>
         </div>
 
         <div className="auth-card">
@@ -93,7 +83,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 type="email"
                 className="field-input"
                 autoComplete="email"
-                defaultValue={demoEmail}
                 required
               />
             </div>
@@ -117,18 +106,10 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             </button>
           </form>
 
-          <div className="demo-box">
-            <p className="demo-box__title">Compte de démonstration</p>
-            <p>
-              E-mail : <code>{demoEmail}</code>
-            </p>
-            {showDemoHint ? (
-              <p>
-                Mot de passe : <code>{demoPassword}</code>
-              </p>
-            ) : (
-              <p>Le mot de passe est fourni dans le README du projet.</p>
-            )}
+          <div className="auth-create">
+            <Link href="/inscription" className="button button--secondary button--block">
+              Créer un compte
+            </Link>
           </div>
 
           <div className="auth-card__checks">
@@ -138,7 +119,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             </p>
             <p>
               <CheckIcon size={16} />
-              Le paiement se fait sur le guichet Monetbil.
+              Le paiement se fait en ligne.
             </p>
           </div>
         </div>

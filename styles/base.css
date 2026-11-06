@@ -9,6 +9,28 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.logo {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--primary);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  transition: color var(--duration) var(--ease-out), background var(--duration) var(--ease-out);
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: var(--surface-soft);
+}
+
 body {
   margin: 0;
   background: var(--color-paper);
@@ -99,8 +121,7 @@ fieldset {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 2px;
+  outline: none;
 }
 
 :target {
