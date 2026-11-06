@@ -860,12 +860,21 @@
 @media (max-width: 680px) {
   .hero {
     min-height: auto;
-    padding-block: var(--space-6) var(--space-10);
-    padding-inline: var(--space-4);
+    padding: 0;
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__inner {
+    gap: var(--space-6);
   }
 
   .hero__media img {
-    max-height: 320px;
+    max-height: 260px;
+  }
+
+  .hero__points {
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
   }
 
   .hero__actions {
