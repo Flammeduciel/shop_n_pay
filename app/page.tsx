@@ -86,7 +86,7 @@ export default async function HomePage() {
             <LockIcon size={24} />
             <div>
               <h2>Paiement Mobile Money</h2>
-              <p>MTN et Airtel Money via le guichet sécurisé Mobile Money.</p>
+              <p>MTN et Airtel Money via le service de paiement sécurisé.</p>
             </div>
           </div>
           <div className="service-item">
@@ -161,7 +161,7 @@ export default async function HomePage() {
             <p className="eyebrow">Paiement</p>
             <h2>Mobile Money, sans carte bancaire</h2>
             <p>
-              Le paiement se fait sur le guichet Mobile Money. Vous choisissez votre
+              Le paiement se fait en ligne. Vous choisissez votre
               opérateur, validez sur votre téléphone, puis revenez sur la boutique.
             </p>
             <Link href="/livraison#paiement" className="button button--secondary">
@@ -181,7 +181,7 @@ export default async function HomePage() {
               <span className="payment-steps__index">02</span>
               <div>
                 <h3>Vous payez</h3>
-                <p>Vous êtes redirigé vers Mobile Money et validez avec votre code Mobile Money.</p>
+                <p>Vous êtes redirigé vers la page de paiement et validez avec votre code Mobile Money.</p>
               </div>
             </li>
             <li>

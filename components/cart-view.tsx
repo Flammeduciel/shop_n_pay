@@ -140,7 +140,7 @@ export function CartView() {
 
         <p className="summary__note">
           <LockIcon size={16} />
-          Paiement par Mobile Money. Vous serez redirigé vers le guichet Mobile Money.
+          Paiement par Mobile Money. Vous serez redirigé vers le Mobile Money.
         </p>
       </aside>
     </div>

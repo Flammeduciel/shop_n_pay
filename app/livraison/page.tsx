@@ -56,7 +56,7 @@ export default function DeliveryPage() {
           <h2 id="paiement-title">Paiement Mobile Money</h2>
           <p>
             Le paiement est traité par Mobile Money. Le montant total, livraison
-            comprise, est calculé sur le serveur avant l'ouverture du guichet.
+            comprise, est calculé sur le serveur avant l'ouverture du .
           </p>
 
           <ol className="steps-list">
@@ -68,7 +68,7 @@ export default function DeliveryPage() {
               </p>
             </li>
             <li>
-              <h3>Valider sur le guichet Mobile Money</h3>
+              <h3>Valider le paiement</h3>
               <p>
                 Vous choisissez votre opérateur, saisissez votre numéro et
                 confirmez avec votre code secret sur votre téléphone.
@@ -90,7 +90,7 @@ export default function DeliveryPage() {
 
           <p>
             Aucune donnée de carte bancaire n'est demandée ni stockée. Les clés
-            Mobile Money restent sur le serveur et ne sont jamais envoyées au
+            Les clés de paiement restent sur le serveur et ne sont jamais envoyées au
             navigateur.
           </p>
         </section>

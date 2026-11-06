@@ -71,7 +71,7 @@ export default function AboutPage() {
         <p>
           Le tunnel de commande s'appuie sur Mobile Money pour Mobile Money. Le
           montant est recalculé sur le serveur, puis une référence de paiement est
-          créée et signée. Après validation sur le guichet, Mobile Money renvoie le
+          créée et signée. Après validation sur le , Mobile Money renvoie le
           statut à la boutique. Aucune donnée bancaire ne transite par le site.
         </p>
 

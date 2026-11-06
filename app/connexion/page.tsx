@@ -119,7 +119,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             </p>
             <p>
               <CheckIcon size={16} />
-              Le paiement se fait sur le guichet Mobile Money.
+              Le paiement se fait en ligne.
             </p>
           </div>
         </div>
