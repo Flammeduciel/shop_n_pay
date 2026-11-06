@@ -172,7 +172,9 @@ npm run build
 npm run start
 npm run test:e2e
 npm run audit:lighthouse
+npm run db:migrate
 npm run db:seed
+npm run db:reset
 ```
 
 `npm run test:e2e` lance Playwright sur un serveur de production. Exécuter `npm run build` avant la première fois. Le test utilise le navigateur Chrome installé sur la machine.
