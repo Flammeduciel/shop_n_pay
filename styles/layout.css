@@ -164,56 +164,6 @@
   text-decoration: underline;
 }
 
-.header-search {
-  grid-area: search;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 270px;
-  height: 42px;
-  border: 1px solid var(--color-line-strong);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface);
-}
-
-.header-search:focus-within {
-  border-color: var(--color-accent);
-  outline: none;
-}
-
-.header-search__input {
-  min-width: 0;
-  flex: 1;
-  height: 100%;
-  padding: 0 var(--space-2) 0 var(--space-3);
-  border: 0;
-  background: transparent;
-  font-size: var(--text-sm);
-}
-
-.header-search__input:focus {
-  outline: none;
-}
-
-.header-search__input::placeholder {
-  color: var(--color-muted);
-}
-
-.header-search__submit {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 100%;
-  border: 0;
-  background: transparent;
-  color: var(--color-muted);
-}
-
-.header-search__submit:hover {
-  color: var(--color-accent);
-}
-
 .header-actions {
   grid-area: actions;
   display: flex;
