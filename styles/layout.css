@@ -56,10 +56,30 @@
 .header-search {
   flex: 1;
   max-width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface-soft);
+  transition: border-color var(--duration) var(--ease-out), background var(--duration) var(--ease-out);
+}
+
+.header-search:focus-within {
+  border-color: var(--primary);
+  background: var(--surface);
 }
 
 .header-search input {
   width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 10px 0;
+}
+
+.header-search i {
+  color: var(--text-tertiary);
 }
 
 .navbar {
