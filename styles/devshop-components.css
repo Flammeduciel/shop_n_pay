@@ -327,15 +327,19 @@ input::placeholder {
 .product-card {
     min-width: 0;
     position: relative;
-    overflow: hidden;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    transition: border-color var(--duration) var(--ease-out);
+    background: transparent;
+    border: 0;
+    transition: opacity var(--duration) var(--ease-out);
 }
 
 .product-card:hover {
-    border-color: var(--line-strong);
+    opacity: 0.9;
+}
+
+.product-media {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--line);
 }
 
 .product-media {
