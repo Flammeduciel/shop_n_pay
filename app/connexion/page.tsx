@@ -34,10 +34,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
   }
 
   const errorMessage = params.erreur ? errorMessages[params.erreur] : undefined;
-  const demoEmail = process.env.AUTH_DEMO_EMAIL ?? "demo@shoppay.cm";
-  const demoPassword = process.env.AUTH_DEMO_PASSWORD ?? "Demo1234!";
-  const showDemoHint =
-    !process.env.AUTH_DEMO_PASSWORD || process.env.AUTH_DEMO_PASSWORD === "Demo1234!";
 
   return (
     <div className="container page page--narrow">
@@ -93,7 +89,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 type="email"
                 className="field-input"
                 autoComplete="email"
-                defaultValue={demoEmail}
                 required
               />
             </div>
@@ -116,20 +111,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               Se connecter
             </button>
           </form>
-
-          <div className="demo-box">
-            <p className="demo-box__title">Compte de démonstration</p>
-            <p>
-              E-mail : <code>{demoEmail}</code>
-            </p>
-            {showDemoHint ? (
-              <p>
-                Mot de passe : <code>{demoPassword}</code>
-              </p>
-            ) : (
-              <p>Le mot de passe est fourni dans le README du projet.</p>
-            )}
-          </div>
 
           <div className="auth-card__checks">
             <p>
