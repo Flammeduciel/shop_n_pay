@@ -66,9 +66,6 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
             <Link href="/catalogue" className="link-arrow">
               Continuer sans acheter
             </Link>
-            <Link href="/inscription" className="link-arrow">
-              Créer un compte
-            </Link>
           </div>
         </div>
 
@@ -116,6 +113,10 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               Se connecter
             </button>
           </form>
+
+          <Link href="/inscription" className="button button--secondary button--block">
+            Créer un compte
+          </Link>
 
           <div className="auth-card__checks">
             <p>
