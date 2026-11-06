@@ -1,9 +1,8 @@
 .hero {
-  min-height: calc(100dvh - var(--header-height) - 44px);
+  min-height: calc(100dvh - var(--header-height));
   display: flex;
   align-items: center;
-  padding-block: clamp(var(--space-10), 6vw, var(--space-20))
-    clamp(var(--space-12), 8vw, var(--space-24));
+  padding: 0 var(--space-6);
 }
 
 .hero__inner {

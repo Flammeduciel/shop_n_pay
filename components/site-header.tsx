@@ -4,11 +4,7 @@ import { UserIcon } from "./icons";
 
 export function SiteHeader() {
   return (
-    <>
-      <p className="announcement">
-        Livraison offerte dès 50 000 FCFA à Douala et Yaoundé
-      </p>
-      <header className="header">
+    <header className="header">
         <div className="header-content">
           <Link href="/" className="logo" aria-label="Shop&Pay, retour à l'accueil">
             <span>Shop&Pay</span>
@@ -34,6 +30,5 @@ export function SiteHeader() {
           </div>
         </div>
       </header>
-    </>
   );
 }
