@@ -57,8 +57,8 @@ export default async function HomePage() {
 
           <div className="hero__media">
             <Image
-              src="/images/hero-still-life.svg"
-              alt="Lampe de bureau, carafe en verre et carnet posés sur une table"
+              src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80"
+              alt="Lampe de bureau posée sur une table"
               width={900}
               height={900}
               priority

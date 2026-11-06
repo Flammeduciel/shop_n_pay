@@ -1,4 +1,7 @@
 .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   padding-block: clamp(var(--space-10), 6vw, var(--space-20))
     clamp(var(--space-12), 8vw, var(--space-24));
 }
