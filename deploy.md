@@ -115,7 +115,7 @@ Points de contrôle :
 - Le retour Monetbil arrive sur `/api/paiement/retour` puis redirige vers la confirmation.
 - La notification arrive sur `/api/paiement/notification` et vérifie la signature avant de contrôler le paiement.
 - Le montant est recalculé côté serveur avant l'appel Monetbil.
-- Le mode simulation reste accessible uniquement si `MONETBIL_DEMO=true` et si la commande en attente appartient au navigateur.
+- Le paiement réel est utilisé. `MONETBIL_DEMO` est ignoré ; les clés doivent être renseignées.
 
 ## 6. Après le déploiement
 
