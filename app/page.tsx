@@ -46,7 +46,7 @@ export default async function HomePage() {
               </li>
               <li>
                 <CheckIcon size={18} />
-                MTN Mobile Money et Orange Money
+                MTN Mobile Money et Airtel Money
               </li>
               <li>
                 <CheckIcon size={18} />
@@ -86,7 +86,7 @@ export default async function HomePage() {
             <LockIcon size={24} />
             <div>
               <h2>Paiement Mobile Money</h2>
-              <p>MTN et Orange Money via le guichet sécurisé Monetbil.</p>
+              <p>MTN et Airtel Money via le guichet sécurisé Monetbil.</p>
             </div>
           </div>
           <div className="service-item">

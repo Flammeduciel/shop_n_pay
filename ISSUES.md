@@ -51,7 +51,7 @@ Ce fichier est la source de vérité du backlog de Shop&Pay. Il sert à créer l
 - Renseigner `MONETBIL_SERVICE_KEY` et `MONETBIL_SERVICE_SECRET` dans Vercel.
 - Passer `MONETBIL_DEMO` à `false`.
 - Configurer les URL de retour et de notification dans Monetbil.
-- Effectuer un paiement de faible montant avec MTN ou Orange Money.
+- Effectuer un paiement de faible montant avec MTN ou Airtel Money.
 - Vérifier la signature de la notification et le statut renvoyé par `checkPayment`.
 - Contrôler que la commande apparaît dans `/compte`.
 - Revenir au mode démonstration si les clés ne sont plus disponibles.

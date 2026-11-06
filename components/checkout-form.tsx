@@ -240,7 +240,7 @@ export function CheckoutForm({ defaultEmail, defaultName }: CheckoutFormProps) {
             <div>
               <p className="payment-method__title">Mobile Money</p>
               <p className="payment-method__text">
-                MTN Mobile Money, Orange Money et autres opérateurs pris en charge
+                MTN Mobile Money, Airtel Money et autres opérateurs pris en charge
                 par Monetbil. Vous validerez le paiement sur le guichet sécurisé.
               </p>
             </div>

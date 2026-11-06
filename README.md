@@ -11,7 +11,7 @@ Shop&Pay vend une sélection courte d'objets pour l'audio, la mobilité, la mais
 | Groupe | 10 |
 | Stack | Next.js 15.5, React 19, TypeScript, Auth.js 5, CSS |
 | Hébergement | Vercel |
-| Paiement | Monetbil, MTN Mobile Money et Orange Money |
+| Paiement | Monetbil, MTN Mobile Money et Airtel Money |
 
 ## 1. Compte de test
 

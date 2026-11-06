@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Cameroun",
     "Mobile Money",
     "MTN",
-    "Orange Money",
+    "Airtel Money",
     "audio",
     "bureau",
   ],
