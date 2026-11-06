@@ -408,7 +408,7 @@ input::placeholder {
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .product-category {
@@ -444,9 +444,14 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     margin-top: 8px;
     padding-top: 12px;
     border-top: 1px solid var(--line);
+}
+
+.product-footer .button {
+    min-width: 110px;
 }
 
 .product-price {
