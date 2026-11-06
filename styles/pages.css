@@ -1,5 +1,5 @@
 .hero {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   padding-block: clamp(var(--space-10), 6vw, var(--space-20))
