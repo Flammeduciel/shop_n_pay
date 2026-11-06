@@ -515,8 +515,7 @@ input::placeholder {
 }
 
 .sort-select:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
+    outline: none;
 }
 
 /* Add to Cart Notification */
@@ -747,8 +746,7 @@ input::placeholder {
 }
 
 .cart-item-remove:focus-visible {
-    outline: 2px solid var(--danger);
-    outline-offset: 1px;
+    outline: none;
 }
 
 .cart-item-remove i {
