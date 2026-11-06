@@ -22,7 +22,7 @@ export default async function HomePage() {
       <section className="hero">
         <div className="container hero__inner">
           <div className="hero__copy">
-            <p className="eyebrow">Sélection 2026 · Douala</p>
+            <p className="eyebrow">Sélection 2026</p>
             <h1>Des objets utiles, choisis pour durer.</h1>
             <p className="hero__lead">
               Audio, mobilité, maison et bureau. Une sélection courte, des prix
@@ -42,7 +42,7 @@ export default async function HomePage() {
             <ul className="hero__points">
               <li>
                 <CheckIcon size={18} />
-                Livraison à Douala et Yaoundé sous 48 h
+                Livraison à Brazzaville et Pointe-Noire sous 48 h
               </li>
               <li>
                 <CheckIcon size={18} />
@@ -79,7 +79,7 @@ export default async function HomePage() {
             <TruckIcon size={24} />
             <div>
               <h2>Livraison suivie</h2>
-              <p>Douala et Yaoundé sous 48 h, autres villes sous 72 h.</p>
+              <p>Brazzaville et Pointe-Noire sous 48 h, autres villes sous 72 h.</p>
             </div>
           </div>
           <div className="service-item">

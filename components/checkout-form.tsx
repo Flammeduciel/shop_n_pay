@@ -188,14 +188,13 @@ export function CheckoutForm({ defaultEmail, defaultName }: CheckoutFormProps) {
                 id="city"
                 name="city"
                 className="field-input field-input--select"
-                defaultValue="Douala"
+                defaultValue="Brazzaville"
                 required
               >
-                <option value="Douala">Douala</option>
-                <option value="Yaoundé">Yaoundé</option>
-                <option value="Bafoussam">Bafoussam</option>
-                <option value="Garoua">Garoua</option>
-                <option value="Bertoua">Bertoua</option>
+                <option value="Brazzaville">Brazzaville</option>
+                <option value="Pointe-Noire">Pointe-Noire</option>
+                <option value="Dolisie">Dolisie</option>
+                <option value="Owando">Owando</option>
                 <option value="Autre">Autre ville</option>
               </select>
             </div>

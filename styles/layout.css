@@ -53,6 +53,21 @@
   text-align: center;
 }
 
+.header-search {
+  flex: 1;
+  max-width: 360px;
+}
+
+.header-search input {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .site-header {
   position: relative;
   z-index: 20;

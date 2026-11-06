@@ -21,7 +21,7 @@ export default function DeliveryPage() {
         <p className="eyebrow">Informations</p>
         <h1>Livraison et paiement</h1>
         <p className="page-header__lead">
-          Les commandes sont préparées à Douala. Les frais et les délais dépendent
+          Les commandes sont préparées à Brazzaville. Les frais et les délais dépendent
           de la ville de livraison.
         </p>
       </header>
@@ -31,7 +31,7 @@ export default function DeliveryPage() {
           <h2 id="livraison-title">Livraison</h2>
           <div className="info-table">
             <div className="info-table__row">
-              <span className="info-table__label">Douala et Yaoundé</span>
+              <span className="info-table__label">Brazzaville et Pointe-Noire</span>
               <span>48 heures ouvrées</span>
               <span>2 500 FCFA</span>
             </div>
