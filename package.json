@@ -10,7 +10,9 @@
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
     "audit:lighthouse": "node scripts/lighthouse.mjs",
-    "db:seed": "node scripts/seed.mjs"
+    "db:migrate": "node scripts/migrate.mjs",
+    "db:seed": "node scripts/seed.mjs",
+    "db:reset": "node scripts/reset.mjs"
   },
   "dependencies": {
     "next": "15.5.29",
