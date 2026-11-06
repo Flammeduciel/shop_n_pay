@@ -1,0 +1,90 @@
+:root {
+  /* DevShop palette */
+  --duration: 180ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --range-progress: 100%;
+
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --primary-soft: #f0fdfa;
+
+  --canvas: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #f7f7fa;
+  --surface-primary: #f0fdfa;
+
+  --text: #1d1d1f;
+  --text-secondary: #62626a;
+  --text-tertiary: #7b7b83;
+
+  --line: #e5e5ea;
+  --line-strong: #d1d1d6;
+
+  --danger: #b42335;
+  --danger-soft: #fff0f2;
+  --success: #28a745;
+  --success-soft: #d4edda;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  --shadow-product: 0 5px 18px rgb(29 29 31 / 12%);
+  --shadow-card: 0 2px 8px rgb(29 29 31 / 8%);
+  --shadow-menu: 0 8px 24px rgb(29 29 31 / 12%);
+
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --header-height: 64px;
+  --mobile-nav-height: 60px;
+
+  /* Aliases pour le code existant */
+  --font-sans: var(--font-family);
+  --color-ink: var(--text);
+  --color-ink-soft: var(--text-secondary);
+  --color-muted: var(--text-tertiary);
+  --color-paper: var(--canvas);
+  --color-surface: var(--surface);
+  --color-paper-deep: var(--surface-soft);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--primary);
+  --color-accent-hover: var(--primary-hover);
+  --color-accent-soft: var(--primary-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: #b26a00;
+  --color-warning-soft: #fff3e0;
+  --color-focus: var(--primary);
+
+  --radius-lg: var(--radius-card);
+  --shadow-sm: var(--shadow-card);
+  --shadow-md: var(--shadow-menu);
+
+  --container: 1400px;
+  --container-narrow: 860px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.85rem;
+  --text-base: 1rem;
+  --text-lg: 1.12rem;
+  --text-xl: 1.35rem;
+  --text-2xl: 1.7rem;
+  --text-3xl: clamp(1.9rem, 3.4vw, 2.7rem);
+  --text-4xl: clamp(2.4rem, 5vw, 3.7rem);
+  --text-5xl: clamp(2.8rem, 6vw, 4.6rem);
+}
