@@ -859,7 +859,13 @@
 
 @media (max-width: 680px) {
   .hero {
-    padding-block: var(--space-8) var(--space-12);
+    min-height: auto;
+    padding-block: var(--space-6) var(--space-10);
+    padding-inline: var(--space-4);
+  }
+
+  .hero__media img {
+    max-height: 320px;
   }
 
   .hero__actions .button {
